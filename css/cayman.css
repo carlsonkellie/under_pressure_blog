@@ -49,32 +49,39 @@ a {
         margin-top: 1rem;
         margin-left: 0; } }
 
+figure {
+    width:33%;
+    float:left;
+    margin:0px;
+    text-align:center;
+    padding:0px; }
+
 .page-header {
-  color: #fff;
+  color: #000;
   text-align: center;
-  background-color: #159957;
-  background-image: linear-gradient(120deg, #155799, #159957); }
+  background-color: #FFFFFF;
+  background-image: linear-gradient(-90deg, #FFFFFF, #303030); }
   @media screen and (min-width: 64em) {
-    .page-header {
-      padding: 5rem 6rem; } }
+    .blog-header {
+      padding: 2rem 3rem; } }
   @media screen and (min-width: 42em) and (max-width: 64em) {
-    .page-header {
+    .blog-header {
       padding: 3rem 4rem; } }
   @media screen and (max-width: 42em) {
-    .page-header {
+    .blog-header {
       padding: 2rem 1rem; } }
 
 .project-name {
   margin-top: 0;
-  margin-bottom: 0.1rem; }
+  margin-bottom: 0;  }
   @media screen and (min-width: 64em) {
-    .project-name {
+    .blog-name {
       font-size: 3.25rem; } }
   @media screen and (min-width: 42em) and (max-width: 64em) {
-    .project-name {
+    .blog-name {
       font-size: 2.25rem; } }
   @media screen and (max-width: 42em) {
-    .project-name {
+    .blog-name {
       font-size: 1.75rem; } }
 
 .project-tagline {
@@ -82,13 +89,13 @@ a {
   font-weight: normal;
   opacity: 0.7; }
   @media screen and (min-width: 64em) {
-    .project-tagline {
+    .blog-tagline {
       font-size: 1.25rem; } }
   @media screen and (min-width: 42em) and (max-width: 64em) {
-    .project-tagline {
+    .blog-tagline {
       font-size: 1.15rem; } }
   @media screen and (max-width: 42em) {
-    .project-tagline {
+    .blog-tagline {
       font-size: 1rem; } }
 
 .main-content {
@@ -111,16 +118,21 @@ a {
       font-size: 1rem; } }
   .main-content img {
     max-width: 100%; }
-  .main-content h1,
+  .main-content h1 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    color: #303030;
+    font-family: 'Raleway', sans-serif;}
   .main-content h2,
   .main-content h3,
   .main-content h4,
   .main-content h5,
   .main-content h6 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
     font-weight: normal;
-    color: #159957; }
+    color: #000000; }
   .main-content p {
     margin-bottom: 1em; }
   .main-content code {
@@ -179,7 +191,19 @@ a {
       content: normal; }
   .main-content ul,
   .main-content ol {
-    margin-top: 0; }
+    margin-top: 0;
+    list-style-type: none;
+    width: 800px;  }
+  .main-content li img {
+    float: left;
+    margin: 0 15px 0 0; }
+  .main-content li p { }
+  .main-content li {
+    padding: 10px;
+    overflow: auto; }
+  .main-content li:hover {
+    background: #eee;
+    cursor: pointer; }
   .main-content blockquote {
     padding: 0 1rem;
     margin-left: 0;
@@ -213,6 +237,140 @@ a {
       padding: 0;
       margin-bottom: 1rem; }
   .main-content hr {
+    height: 2px;
+    padding: 0;
+    margin: 1rem 0;
+    background-color: #eff0f1;
+    border: 0; }
+
+.post-content {
+  word-wrap: break-word; }
+  .post-content :first-child {
+    margin-top: 0; }
+  @media screen and (min-width: 64em) {
+    .post-content {
+      max-width: 64rem;
+      padding: 2rem 6rem;
+      margin: 0 auto;
+      font-size: 1.1rem; } }
+  @media screen and (min-width: 42em) and (max-width: 64em) {
+    .post-content {
+      padding: 2rem 4rem;
+      font-size: 1.1rem; } }
+  @media screen and (max-width: 42em) {
+    .post-content {
+      padding: 2rem 1rem;
+      font-size: 1rem; } }
+  .post-content img {
+    max-width: 100%; }
+  .post-content h1 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    color: #303030;
+    font-family: 'Raleway', sans-serif;}
+  .post-content h2,
+  .post-content h3,
+  .post-content h4,
+  .post-content h5,
+  .post-content h6 {
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    color: #000000; }
+  .post-content p {
+    margin-bottom: 1em; }
+  .post-content code {
+    padding: 2px 4px;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 0.9rem;
+    color: #567482;
+    background-color: #f3f6fa;
+    border-radius: 0.3rem; }
+  .post-content pre {
+    padding: 0.8rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    color: #567482;
+    word-wrap: normal;
+    background-color: #f3f6fa;
+    border: solid 1px #dce6f0;
+    border-radius: 0.3rem; }
+    .post-content pre > code {
+      padding: 0;
+      margin: 0;
+      font-size: 0.9rem;
+      color: #567482;
+      word-break: normal;
+      white-space: pre;
+      background: transparent;
+      border: 0; }
+  .post-content .highlight {
+    margin-bottom: 1rem; }
+    .post-content .highlight pre {
+      margin-bottom: 0;
+      word-break: normal; }
+  .post-content .highlight pre,
+  .post-content pre {
+    padding: 0.8rem;
+    overflow: auto;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    border-radius: 0.3rem;
+    -webkit-overflow-scrolling: touch; }
+  .post-content pre code,
+  .post-content pre tt {
+    display: inline;
+    max-width: initial;
+    padding: 0;
+    margin: 0;
+    overflow: initial;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0; }
+    .post-content pre code:before, .post-content pre code:after,
+    .post-content pre tt:before,
+    .post-content pre tt:after {
+      content: normal; }
+  .post-content ul,
+  .post-content ol {
+    margin-top: 0; 
+    font-size:15px; }
+  .post-content blockquote {
+    padding: 0 1rem;
+    margin-left: 0;
+    color: #819198;
+    border-left: 0.3rem solid #dce6f0; }
+    .post-content blockquote > :first-child {
+      margin-top: 0; }
+    .post-content blockquote > :last-child {
+      margin-bottom: 0; }
+  .post-content table {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    word-break: normal;
+    word-break: keep-all;
+    -webkit-overflow-scrolling: touch; }
+    .post-content table th {
+      font-weight: bold; }
+    .post-content table th,
+    .post-content table td {
+      padding: 0.5rem 1rem;
+      border: 1px solid #e9ebec; }
+  .post-content dl {
+    padding: 0; }
+    .post-content dl dt {
+      padding: 0;
+      margin-top: 1rem;
+      font-size: 1rem;
+      font-weight: bold; }
+    .post-content dl dd {
+      padding: 0;
+      margin-bottom: 1rem; }
+  .post-content hr {
     height: 2px;
     padding: 0;
     margin: 1rem 0;
