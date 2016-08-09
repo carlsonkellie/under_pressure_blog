@@ -1,13 +1,36 @@
 ---
-layout: default
+layout: blog_home
 title: {{ site.name }}
 ---
 
 <div id="home">
-  <h1>Blog Posts</h1>
+  <h1>Favorites!!!</h1>
+  <h5>This page is in progress! I'm using these images as tests to find any bugs in my html code!</h5>
+  <br>
+  <figure> 
+    <a href="https://carlsonkellie.github.io/main/2016/07/26/chicken-pancetta-risotto.html"> <img src="blog-images/chicken-pancetta-risotto-favorite.jpg" alt="risotto fave" width="225" height="175"> 
+    <figcaption>Chicken Pancetta Risotto</figcaption> </a>
+  </figure>
+
+  <figure>
+    <a href="https://carlsonkellie.github.io/main/2016/08/03/guacamole.html"> <img src="blog-images/guacamole.jpg" alt="guac" width="225" height="175">
+    <figcaption>Guacamole</figcaption> </a>                    
+  </figure>
+
+  <figure>
+    <a href="https://carlsonkellie.github.io/main/2016/07/30/chicken-marsala.html"> <img src="blog-images/BB-8.jpg" alt="cute droid" width="225" height="175">
+    <figcaption>BB-8 4 Life</figcaption> </a>
+  </figure>
+  <p style="margin-bottom:250px;"></p>
+  <hr size="0" />
+  <h1>Recipes</h1>
   <ul class="posts">
     {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+      <li><a href="{{ site.baseurl }}{{ post.url }}"> <img src= "{{ site.baseurl }}{{ post.image }}" width="150" height="150"/> </a>
+      <span style="font-size:14px; font-family: 'Raleway', sans-serif; color:#552e6b">{{ post.date | date_to_string }}</span> <!--&raquo;-->
+      <br> 
+      <h2 style="font-size:18px; font-family: 'Raleway', sans-serif; color:#000000"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+      <p style="font-size:14px; color:#000000">{{ post.description }}</p></li>
     {% endfor %}
   </ul>
 </div>
