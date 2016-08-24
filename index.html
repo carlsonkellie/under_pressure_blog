@@ -26,7 +26,7 @@ title: {{ site.name }}
   <h1>Recipes</h1>
   <ul class="posts">
     {% for post in site.posts %}
-      <li><a href="{{ site.baseurl }}{{ post.url }}"> <img src= "blog-images/BB-8.jpg" width="150" height="150"/> </a>
+      <li><a href="{{ site.baseurl }}{{ post.url }}"> <img src= "{{ post.image }}" width="150" height="150"/> </a>
       <span style="font-size:14px; font-family: 'Raleway', sans-serif; color:#552e6b">{{ post.date | date_to_string }}</span> <!--&raquo;-->
       <br> 
       <h2 style="font-size:18px; font-family: 'Raleway', sans-serif; color:#000000"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
