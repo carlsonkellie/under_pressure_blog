@@ -1,7 +1,7 @@
 # Setup
 title:        under pressure
 tagline:      collegiate cullinary creations
-baseurl:      ""
+baseurl:      "/under_pressure_blog"
 paginate:     1
 
 # About/contact
